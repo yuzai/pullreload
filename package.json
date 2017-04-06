@@ -1,0 +1,19 @@
+{
+  "name": "pullreload",
+  "version": "1.0.0",
+  "description": "pull to reload using javascript",
+  "main": "pullreload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuzai/pullreload.git"
+  },
+  "keywords": [
+    "javascript",
+    "components"
+  ],
+  "author": "xiaoboma",
+  "license": "ISC"
+}
