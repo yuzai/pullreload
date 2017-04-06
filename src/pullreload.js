@@ -1,5 +1,3 @@
-require('./pullreload.css');
-
 var isDragging = false;
 var isThresholdReached = false;
 var popStart = 0;
@@ -85,9 +83,27 @@ function moveend(){
 }
 var callback;
 var pullReload = function(options){
+  try{
   this.content = document.getElementById(options.content);
   var ptr = options.ptr || 'ptr';
   this.ptr = document.getElementById(ptr);
+  var ptr_style = {
+    padding:'0px',
+    margin:'0px',
+    display:'block',
+    height:'40px',
+    border:'1px solid #000',
+    borderTop:'0px',
+    borderLeft:'0px',
+    borderRight:'0px',
+    textAlign:'center',
+    lineHeight:'40px',
+    fontSize:'30px',
+    marginTop:'-41px'
+  }
+  for(var key in ptr_style){
+    this.ptr.style[key] = ptr_style[key];
+  }
   callback = options.callback || function(){return
     new Promise(function(resolve,reject){
       setTimeout(function(){
@@ -104,5 +120,9 @@ var pullReload = function(options){
     this.content.removeEventListener('touchstart',movestart)
   }
   return this;
+}catch(e){
+  console.log(e);
+  console.log('请在浏览器环境下运行');
+}
 }
 module.exports = pullReload;
