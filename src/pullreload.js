@@ -105,4 +105,4 @@ var pullReload = function(options){
   }
   return this;
 }
-export default pullReload;
+module.exports = pullReload;
