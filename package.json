@@ -2,7 +2,7 @@
   "name": "pullreload",
   "version": "1.0.0",
   "description": "pull to reload using javascript",
-  "main": "pullreload.js",
+  "main": "./src/pullreload.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "p": "webpack -p",
