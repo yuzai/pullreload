@@ -4,10 +4,10 @@ var webpack = require('webpack');
 module.exports = {
   context:path.resolve(__dirname,'./src'),
   entry:{
-    index:'./index.js'
+    pullreload:'./pullreload.js'
   },
   output:{
-    filename:'[name].bundle.js',
+    filename:'[name].min.js',
     path:path.resolve(__dirname,'./dist'),
     publicPath:'/',
   },
