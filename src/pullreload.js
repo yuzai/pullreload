@@ -1,3 +1,4 @@
+;(function(window){
 var isDragging = false;
 var isThresholdReached = false;
 var popStart = 0;
@@ -82,7 +83,7 @@ function moveend(){
   isThresholdReached = false;
 }
 var callback;
-var pullReload = function(options){
+window.pullReload = function(options){
   try{
   this.content = document.getElementById(options.content);
   var ptr = options.ptr || 'ptr';
@@ -125,4 +126,4 @@ var pullReload = function(options){
   console.log('请在浏览器环境下运行');
 }
 }
-module.exports = pullReload;
+})(window);
