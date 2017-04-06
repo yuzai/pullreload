@@ -105,12 +105,9 @@ window.pullReload = function(options){
   for(var key in ptr_style){
     this.ptr.style[key] = ptr_style[key];
   }
-  callback = options.callback || function(){return
-    new Promise(function(resolve,reject){
-      setTimeout(function(){
-        resolve('no refresh');
-      },1000);
-    })
+  callback = options.callback || function(){
+    console.log('hello!');
+  }
   };
   this.start = function(){
     this.content.addEventListener('mousedown',movestart);
